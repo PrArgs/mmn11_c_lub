@@ -1,11 +1,6 @@
-#include <stdio.h>
-#include <string.h>
+#include "my_string.h"
 
 #define MAXSTR 80
-
-int my_strcmp(char s[],char t[]);
-int my_strncmp(char s[],char t[],int n);
-char my_strchr();
 
 
 int main()
@@ -15,12 +10,12 @@ int main()
 	char t[MAXSTR];
 
     printf("please enter first string\n");
-    char stest[] = gets(s);
+    scanf("%s",s);
 
     printf("please enter second string\n");
-    char ttest[] = gets(t);
+    scanf("%s",t);
 
-    ptitf("smy_trcmp result is: %d \n",my_strcmp(stest,ttest));
+    printf("smy_trcmp result is: %d \n",my_strcmp(s,t));
 
     return 0;
 }
@@ -30,29 +25,21 @@ int main()
  * Returns 0 if s=t, -1 if s<t AND 1 if s>t
  *
  * */
-int my_strcmp(char s[],char t[])
+int my_strcmp(char *s,char *t)
 {
-	int minsize = min(sizeof(s),sizeof(t));
 	int i=0;
-	while(i < minsize)
+	while(s[i]==t[i])
 	{
-		if(s[i]==t[i])
-			i++;
-		else
-			return (s[i] < t[i])? -1 : 1 ;
-
+		if(s[i]=='\0')
+			return 0;
+		i++;
 	}
-
-	if(sizeof(s) == sizeof(t)){
-		return 0;
-	}
-
-    return (sizeof(s) < sizeof(t))? -1 : 1;
+	return (s[i] < t[i])? -1 : 1 ;
 }
 
 int my_strncmp(char s[],char t[],int n)
 {
-	int minsize = min(sizeof(s),sizeof(t));
+	/*int minsize = min(sizeof(s),sizeof(t));
 	if (n > minsize)
 			return my_strcmp(s,t);
 	else
@@ -64,7 +51,7 @@ int my_strncmp(char s[],char t[],int n)
 				else
 					return (s[i] < t[i])? -1 : 1 ;
 
-			}
+			}*/
 	return 0;
 }
 
