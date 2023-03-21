@@ -5,7 +5,10 @@
 
 int main()
 {
-
+	printf("Start testing\n");
+	int i=0;
+	for(;i <4; i++)
+	{
 	char s[MAXSTR];
 	char t[MAXSTR];
 
@@ -16,6 +19,12 @@ int main()
     scanf("%s",t);
 
     printf("smy_trcmp result is: %d \n",my_strcmp(s,t));
+
+    printf("my_strncmp result is: %d \n",my_strncmp(s,t,i*2));
+
+    printf("you chose %c\n",'c');
+    printf("my_strchr result is: %p \n",my_strchr(s,'c'));
+	}
 
     return 0;
 }
@@ -37,26 +46,30 @@ int my_strcmp(char *s,char *t)
 	return (s[i] < t[i])? -1 : 1 ;
 }
 
-int my_strncmp(char s[],char t[],int n)
+int my_strncmp(char *s,char *t,int n)
 {
-	/*int minsize = min(sizeof(s),sizeof(t));
-	if (n > minsize)
-			return my_strcmp(s,t);
-	else
-		int i=0;
-		while(i <= n)
-			{
-				if(s[i]==t[i])
-					i++;
-				else
-					return (s[i] < t[i])? -1 : 1 ;
-
-			}*/
+	int i=0;
+	while(i <= n)
+	{
+		if(s[i]=='\0')
+			return 0;
+		if(s[i] != t[i])
+			return (s[i] < t[i])? -1 : 1 ;
+		i++;
+	}
 	return 0;
 }
 
-
-char my_strchr()
+char *my_strchr(char *s, int c)
 {
-    return '0';
+	int i = 0;
+	char comp = (unsigned char)c;
+	while(s[i] != '0')
+	{
+		if(s[i] == comp)
+			return &s[i];
+		else
+			i++;
+	}
+    return NULL;
 }
