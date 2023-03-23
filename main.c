@@ -1,5 +1,5 @@
-#include my_string.c
-#include ount_bits.c
+#include "my_string.h"
+#include "count_bits.h"
 
 int main()
 {
