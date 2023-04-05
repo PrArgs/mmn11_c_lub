@@ -1,4 +1,5 @@
 #include "my_string.h"
+#include "count_bits.h"
 
 #define MAXSTR 80
 
