@@ -16,9 +16,9 @@ int main()
     scanf("%s",s);
 
     printf("please enter second string\n");
-    scanf("%s",t);
+	scanf("%s",t);
 
-    printf("smy_trcmp result is: %d \n",my_strcmp(s,t));
+	printf("smy_trcmp result is: %d \n",my_strcmp(s,t));
 
     printf("my_strncmp result is: %d \n",my_strncmp(s,t,i*2));
 
