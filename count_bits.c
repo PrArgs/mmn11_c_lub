@@ -2,6 +2,7 @@
 
 #define BITARRY 33
 
+
 int main()
 {
 
@@ -9,22 +10,21 @@ int main()
 	while(1)
 	{
 		printf("\n please enter a number in decimal or -1 to exit: \n ");
-		printf("\n is anybody here?\n");
 		scanf("%d", &num);
-
+		if(num == -1)
+		        {
+		            return num;
+		        }
+		/*print the number in binary*/
         to_binary(num);
 		printf(" has: %d even on bits in it\n", count_bits(num));
 
-		if(num == -1)
-        {
-            return num;
-        }
+
 	}
 	return 0;
 }
-
-
 /*
+
 count_bits:
 return number of on bits in an even location in an unsigned long
  */
