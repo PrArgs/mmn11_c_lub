@@ -13,7 +13,7 @@ int main()
 	char abc[26]="abcdefghijklmnopqrstuvwxyz";
 	for(;i <4; i++)
 	{
-		char *p = &abc[rand() % (sizeof(abc) - 1)];
+		char p = abc[rand() % (sizeof(abc) - 1)];
 
     printf("please enter first string\n");
     scanf("%s",s);
@@ -25,8 +25,8 @@ int main()
 
     printf("my_strncmp result is: %d \n",my_strncmp(s,t,i*2));
 
-    printf("you chose %c\n",&p);
-    printf("my_strchr result is: %p \n",my_strchr(s,'c'));
+    printf("you chose %c\n",p);
+    printf("my_strchr result is: %d \n",my_strchr(s,'c'));
 	}
 
     return 0;
@@ -66,15 +66,13 @@ int my_strncmp(char *s,char *t,int n)
 int my_strchr(char s[], int c)
 {
 	int i = 0;
-	while(s[i] != '\0' && s[i] != c)
+	while(s[i] != '\0')
 	{
 		i++;
-	}
-	{
 		if(s[i] == c)
+		{
 			return i;
-		else
-			return-1;
+		}
 	}
-    return NULL;
+	return-1;
 }
