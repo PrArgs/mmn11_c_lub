@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mmn12.dir/main.c.obj"
-  "CMakeFiles/mmn12.dir/main.c.obj.d"
   "CMakeFiles/mmn12.dir/my_set.c.obj"
   "CMakeFiles/mmn12.dir/my_set.c.obj.d"
   "CMakeFiles/mmn12.dir/stack.c.obj"

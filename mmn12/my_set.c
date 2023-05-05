@@ -23,7 +23,7 @@ void *get_set(void){
         switch (c) {
             case ' ':
                 //if the stack is empty
-                if (getop(val) || val[sp] != '\0'){
+                if (getop() || stack[sp] != '\0'){
                     //checks if the number is in the set
                     if (in_the_set(arr, size)){
                         //if the number is in the set
@@ -34,7 +34,7 @@ void *get_set(void){
                         //if the number is not in the set
                         //add the number to the set
                         arr = (int *)realloc(arr, BIGGER(size));
-                        arr[size] = getop(val);
+                        arr[size] = getop();
                         size++;
                         clear_stack();
                         break;
@@ -59,7 +59,7 @@ void *get_set(void){
 int in_the_set(int *arr, int size){
     int i = 0;
     for(i; i < size; i++){
-        if (arr[i] == getop(val))
+        if (arr[i] == getop())
             return 1;
     }
     return 0;
@@ -71,7 +71,7 @@ void print_set(int *arr, int size){
     }
     printf("The set is: ");
     int i = 0;
-    for(i; i < size; i++){
+    for(i; i < size; i+sizeof(int)){
         printf(" %d, ", arr[i]);
     }
 }

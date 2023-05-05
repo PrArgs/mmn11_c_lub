@@ -68,24 +68,10 @@ include CMakeFiles/mmn12.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mmn12.dir/flags.make
 
-CMakeFiles/mmn12.dir/main.c.obj: CMakeFiles/mmn12.dir/flags.make
-CMakeFiles/mmn12.dir/main.c.obj: ../main.c
-CMakeFiles/mmn12.dir/main.c.obj: CMakeFiles/mmn12.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mmn12.dir/main.c.obj"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mmn12.dir/main.c.obj -MF CMakeFiles\mmn12.dir\main.c.obj.d -o CMakeFiles\mmn12.dir\main.c.obj -c "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\main.c"
-
-CMakeFiles/mmn12.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/mmn12.dir/main.c.i"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\main.c" > CMakeFiles\mmn12.dir\main.c.i
-
-CMakeFiles/mmn12.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/mmn12.dir/main.c.s"
-	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\main.c" -o CMakeFiles\mmn12.dir\main.c.s
-
 CMakeFiles/mmn12.dir/my_set.c.obj: CMakeFiles/mmn12.dir/flags.make
 CMakeFiles/mmn12.dir/my_set.c.obj: ../my_set.c
 CMakeFiles/mmn12.dir/my_set.c.obj: CMakeFiles/mmn12.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mmn12.dir/my_set.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/mmn12.dir/my_set.c.obj"
 	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mmn12.dir/my_set.c.obj -MF CMakeFiles\mmn12.dir\my_set.c.obj.d -o CMakeFiles\mmn12.dir\my_set.c.obj -c "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\my_set.c"
 
 CMakeFiles/mmn12.dir/my_set.c.i: cmake_force
@@ -99,7 +85,7 @@ CMakeFiles/mmn12.dir/my_set.c.s: cmake_force
 CMakeFiles/mmn12.dir/stack.c.obj: CMakeFiles/mmn12.dir/flags.make
 CMakeFiles/mmn12.dir/stack.c.obj: ../stack.c
 CMakeFiles/mmn12.dir/stack.c.obj: CMakeFiles/mmn12.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/mmn12.dir/stack.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/mmn12.dir/stack.c.obj"
 	C:\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/mmn12.dir/stack.c.obj -MF CMakeFiles\mmn12.dir\stack.c.obj.d -o CMakeFiles\mmn12.dir\stack.c.obj -c "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\stack.c"
 
 CMakeFiles/mmn12.dir/stack.c.i: cmake_force
@@ -112,21 +98,19 @@ CMakeFiles/mmn12.dir/stack.c.s: cmake_force
 
 # Object files for target mmn12
 mmn12_OBJECTS = \
-"CMakeFiles/mmn12.dir/main.c.obj" \
 "CMakeFiles/mmn12.dir/my_set.c.obj" \
 "CMakeFiles/mmn12.dir/stack.c.obj"
 
 # External object files for target mmn12
 mmn12_EXTERNAL_OBJECTS =
 
-mmn12.exe: CMakeFiles/mmn12.dir/main.c.obj
 mmn12.exe: CMakeFiles/mmn12.dir/my_set.c.obj
 mmn12.exe: CMakeFiles/mmn12.dir/stack.c.obj
 mmn12.exe: CMakeFiles/mmn12.dir/build.make
 mmn12.exe: CMakeFiles/mmn12.dir/linklibs.rsp
 mmn12.exe: CMakeFiles/mmn12.dir/objects1.rsp
 mmn12.exe: CMakeFiles/mmn12.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable mmn12.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable mmn12.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\mmn12.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

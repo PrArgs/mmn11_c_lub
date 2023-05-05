@@ -10,11 +10,11 @@
 #define MAXOP 100 /* max size of operand or operator */
 #define NUMBER '0' /* signal that a number was found */
 #define COMMAND 'C' /* signal that a command was found */
-#define MAXVAL 100 /* max depth of val stack */
-int sp = 0; /* next free stack position */
-char val [MAXVAL]; /* value stack */
+#define MAXVAL 100 /* max depth of stack stack */
+static int sp = 0; /* next free stack position */
+static char stack[MAXVAL]; /* value stack */
 
-int getop (char []);
+int getop(void);
 void push (double);
 int pop (void);
 void clear_stack(void);

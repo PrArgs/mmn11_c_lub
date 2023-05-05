@@ -12,7 +12,7 @@
 
 
 #define NUMBER '0' // signal that a number was found
-#define MAXVAL 100 /* max depth of val stack */
+#define MAXVAL 100 /* max depth of stack stack */
 #define BIGGER(n) (n+1*sizeof(int)) // macro for realloc
 
 void *get_set(void);
