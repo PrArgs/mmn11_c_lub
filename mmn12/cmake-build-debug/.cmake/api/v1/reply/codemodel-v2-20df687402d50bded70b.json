@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mmn12",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mmn12::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mmn12-Debug-18174710a8e6decee53e.json",
+					"name" : "mmn12",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug",
+		"source" : "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
