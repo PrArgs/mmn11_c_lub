@@ -71,7 +71,7 @@ void print_set(int *arr, int size){
     }
     printf("The set is: ");
     int i = 0;
-    for(i; i < size; i+sizeof(int)){
+    for(i; i < size; i++){
         printf(" %d, ", arr[i]);
     }
 }
