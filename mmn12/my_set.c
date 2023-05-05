@@ -10,7 +10,7 @@ int main ( )
 {
     printf("please enter a set of numbers: ");
     get_set();
-    printf("\n bye bye");
+    printf("\n bye bye \n");
     return 0;
 }
 
@@ -24,16 +24,19 @@ void get_set(void)
     int sign = 1;
 
     char c;
-    while ((c=getchar()) && c != EOF) {
+    while ((c=getchar())!= EOF) {
 
+    	/* if c is a digit*/
         if ('0' <= c && c <= '9')
         {
             tmp = c - '0';
             /*convert char to int*/
-            if (sign >= 0 ) {
+            if (sign > -1 )
+            {
                 sign = 1;
             }
-            val = (val*10) +(sign * tmp);
+
+            val = (val*10) +(tmp);
             continue;
         }
 
@@ -54,11 +57,12 @@ void get_set(void)
         }
 
         if (c == '-'){
-            sign *= -1;
+            sign = -1;
         }
     }
+    printf("\n here \n");
 
-    //if the last char is a number
+    /*if the last char is a number*/
     if (sign != 0)
     {
         add_to_set(arr,size,val*sign);
