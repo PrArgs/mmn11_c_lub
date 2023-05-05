@@ -11,7 +11,7 @@ static int sp = 0; /* next free stack position */
 static char stack[MAXVAL]; /* value stack */
 
 int getop(void);
-void push (double);
+void push (char c);
 int pop (void);
 void clear_stack(void);
 void print_stack(void);

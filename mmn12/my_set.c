@@ -19,39 +19,39 @@ void get_set(void){
     int size = sizeof(arr);
     /*get input from user char by char*/
     char c;
-    while ((c= getchar()) != EOF)
+    while ((c= getchar()) != EOF){
     	if (isnumber(c)){
     		push(c);
     		break;
 
     	}
-    	else{
-        switch (c) {
-            case ' ':
-                /*if the stack is empty*/
-                if (getop() || stack[sp] != '\0'){
-                    /*checks if the number is in the set*/
-                    if (in_the_set(arr, size)){
-                        /*if the number is in the set*/
-                        clear_stack();
-                        break;
+    	else {
+            switch (c) {
+                case ' ':
+                    /*if the stack is empty*/
+                    if (getop() || stack[0] != '\0') {
+                        /*checks if the number is in the set*/
+                        if (in_the_set(arr, size, getop())) {
+                            /*if the number is in the set*/
+                            clear_stack();
+                            continue;
+                        } else {
+                            /*if the number is not in the set add the number to the set*/
+                            arr = (int *) realloc(arr, BIGGER(size));
+                            arr[size] = getop();
+                            size++;
+                            clear_stack();
+                            continue;
+                        }
+
                     }
-                    else {
-                        /*if the number is not in the set add the number to the set*/
-                        arr = (int *)realloc(arr, BIGGER(size));
-                        arr[size] = getop();
-                        size++;
-                        clear_stack();
-                        break;
-                    }
+                    continue;
+                    /*if the char is a number*/
 
-                }
-                break;
-                /*if the char is a number*/
+                default:
 
-            default:
-
-                break;
+                    continue;
+            }
         }
 
         }
@@ -61,10 +61,10 @@ void get_set(void){
     size = 0;
     }
 
-int in_the_set(int *arr, int size){
+int in_the_set(int *arr, int size, int num){
     int i = 0;
     for(; i < size; i++){
-        if (arr[i] == getop())
+        if (arr[i] == num)
             return 1;
     }
     return 0;
@@ -84,10 +84,8 @@ void print_set(int *arr, int size){
 }
 
 int isnumber(char c){
-	if (c >= '0' || c <= '9'){
+	if (c >= '0' && c <= '9'){
 		return 1;
 	}
-	return 0;
-
-
-}
+    return 0;
+    }

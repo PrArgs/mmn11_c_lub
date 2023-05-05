@@ -4,8 +4,8 @@
 
 #include "stack.h"
 
-void push (double f){
-    stack[sp++] = f;
+void push (char c){
+    stack[sp++] = c;
 }
 int pop (void) {
     if (sp > 0)
@@ -32,7 +32,9 @@ int getop(void){
 
     if (sp >= 0)
     {
-        return atoi(stack);
+        int num = atoi(stack);
+        printf_s("%d\n", num);
+        return num;
     }
 
     else{

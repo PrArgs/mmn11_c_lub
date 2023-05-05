@@ -15,7 +15,7 @@
 #define BIGGER(n) (n+1*sizeof(int)) 
 
 void get_set(void);
-int in_the_set(int *arr, int size);
+int in_the_set(int *arr, int size, int num);
 void print_set(int *arr, int size);
 int isnumber(char c);
 
