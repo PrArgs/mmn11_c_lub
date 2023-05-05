@@ -82,7 +82,7 @@ void add_to_set(int *arr, int size, int num){
     }
     printf("new number added: %d\n", num);
     /*if the number is not in the set add the number to the set*/
-    arr = (int *) realloc(arr, BIGGER(size));
+    arr = realloc(arr, BIGGER(size));
     arr[size] = num;
 }
 
