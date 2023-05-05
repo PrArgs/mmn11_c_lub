@@ -17,7 +17,7 @@ int main ( )
 void get_set(void)
 {
     /*set a new dynamic int array*/
-    int *arr = (int *)malloc(sizeof(int));
+    int *arr = (int *)malloc(1*sizeof(int));
     int size = 0;
     int val;
     int tmp;
@@ -82,7 +82,7 @@ void add_to_set(int *arr, int size, int num){
     }
     printf("new number added: %d\n", num);
     /*if the number is not in the set add the number to the set*/
-    arr = realloc(arr, BIGGER(size));
+    arr = (int *)realloc(arr, BIGGER(size));
     arr[size] = num;
 }
 
