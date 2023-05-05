@@ -1,6 +1,6 @@
-//
+/*
 // Created by argam on 05/05/2023.
-//
+*/
 
 #ifndef MMN12_MY_SET_H
 #define MMN12_MY_SET_H
@@ -11,9 +11,9 @@
 #include "stack.h"
 
 
-#define NUMBER '0' // signal that a number was found
+
 #define MAXVAL 100 /* max depth of stack stack */
-// macro for realloc
+/*macro for realloc*/
 #define BIGGER(n) (n+1*sizeof(int)) 
 
 void *get_set(void);
@@ -21,4 +21,4 @@ int in_the_set(int *arr, int size);
 void print_set(int *arr, int size);
 
 
-#endif //MMN12_MY_SET_H
+#endif /*MMN12_MY_SET_H */

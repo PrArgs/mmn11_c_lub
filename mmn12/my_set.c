@@ -1,6 +1,6 @@
-//
-// Created by argam on 05/05/2023.
-//
+/*
+ Created by argam on 05/05/2023.
+*/
 
 #include "my_set.h"
 
@@ -14,25 +14,24 @@ int main ( )
 }
 
 void *get_set(void){
-    //set a new dinamic array
+    /*set a new dinamic array*/
     int *arr = (int *)malloc(sizeof(int));
     int size = sizeof(arr);
-    //get input from user char by char
+    /*get input from user char by char*/
     char c;
     while ((c= getchar()) != EOF)
         switch (c) {
             case ' ':
-                //if the stack is empty
+                /*if the stack is empty*/
                 if (getop() || stack[sp] != '\0'){
-                    //checks if the number is in the set
+                    /*checks if the number is in the set*/
                     if (in_the_set(arr, size)){
-                        //if the number is in the set
+                        /*if the number is in the set*/
                         clear_stack();
                         break;
                     }
                     else {
-                        //if the number is not in the set
-                        //add the number to the set
+                        /*if the number is not in the set add the number to the set*/
                         arr = (int *)realloc(arr, BIGGER(size));
                         arr[size] = getop();
                         size++;
@@ -42,9 +41,9 @@ void *get_set(void){
 
                 }
                 break;
-            //if the char is a number
+                /*if the char is a number*/
             case '0'...'9':
-                //push the number to the stack
+                /*push the number to the stack*/
                 push(c);
                 break;
             default:
