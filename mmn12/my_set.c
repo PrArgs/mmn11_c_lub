@@ -9,17 +9,23 @@
 int main ( )
 {
     printf("please enter a set of numbers: ");
-    int *set = get_set();
+    get_set();
     return 0;
 }
 
-void *get_set(void){
+void get_set(void){
     /*set a new dinamic array*/
     int *arr = (int *)malloc(sizeof(int));
     int size = sizeof(arr);
     /*get input from user char by char*/
     char c;
     while ((c= getchar()) != EOF)
+    	if (isnumber(c)){
+    		push(c);
+    		break;
+
+    	}
+    	else{
         switch (c) {
             case ' ':
                 /*if the stack is empty*/
@@ -42,14 +48,14 @@ void *get_set(void){
                 }
                 break;
                 /*if the char is a number*/
-            case '0'...'9':
-                /*push the number to the stack*/
-                push(c);
-                break;
+
             default:
+
                 break;
+        }
 
         }
+
     print_set(arr, size);
     free(arr);
     size = 0;
@@ -57,20 +63,31 @@ void *get_set(void){
 
 int in_the_set(int *arr, int size){
     int i = 0;
-    for(i; i < size; i++){
+    for(; i < size; i++){
         if (arr[i] == getop())
             return 1;
     }
     return 0;
 }
+
 void print_set(int *arr, int size){
+    int i = 0;
     if (size == 0){
         printf("The set is empty\n");
         return;
     }
     printf("The set is: ");
-    int i = 0;
-    for(i; i < size; i++){
+    for(; i < size; i++){
         printf(" %d, ", arr[i]);
     }
+    printf("\n");
+}
+
+int isnumber(char c){
+	if (c >= '0' || c <= '9'){
+		return 1;
+	}
+	return 0;
+
+
 }

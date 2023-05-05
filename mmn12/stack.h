@@ -1,9 +1,7 @@
 /*
-// Created by argam on 05/05/2023.
+// Created by Roi ArgAMAN on 05/05/2023.
 */
 
-#ifndef MMN12_STACK_H
-#define MMN12_STACK_H
 #include <stdio.h>
 #include <math.h> /* for atof */
 #include <stdlib.h>
@@ -17,4 +15,3 @@ void push (double);
 int pop (void);
 void clear_stack(void);
 void print_stack(void);
-#endif //MMN12_STACK_H

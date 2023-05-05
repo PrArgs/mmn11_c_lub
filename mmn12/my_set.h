@@ -1,9 +1,7 @@
 /*
-// Created by argam on 05/05/2023.
+// Created by Roi Argaman on 05/05/2023.
 */
 
-#ifndef MMN12_MY_SET_H
-#define MMN12_MY_SET_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,9 +14,8 @@
 /*macro for realloc*/
 #define BIGGER(n) (n+1*sizeof(int)) 
 
-void *get_set(void);
+void get_set(void);
 int in_the_set(int *arr, int size);
 void print_set(int *arr, int size);
+int isnumber(char c);
 
-
-#endif /*MMN12_MY_SET_H */
