@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mmn12
+# Target rules for targets named tmp
 
 # Build rule for target.
-mmn12: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mmn12
-.PHONY : mmn12
+tmp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tmp
+.PHONY : tmp
 
 # fast build rule for target.
-mmn12/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/build
-.PHONY : mmn12/fast
+tmp/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/build
+.PHONY : tmp/fast
 
 my_set.obj: my_set.c.obj
 .PHONY : my_set.obj
 
 # target to build an object file
 my_set.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/my_set.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/my_set.c.obj
 .PHONY : my_set.c.obj
 
 my_set.i: my_set.c.i
@@ -141,7 +141,7 @@ my_set.i: my_set.c.i
 
 # target to preprocess a source file
 my_set.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/my_set.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/my_set.c.i
 .PHONY : my_set.c.i
 
 my_set.s: my_set.c.s
@@ -149,32 +149,8 @@ my_set.s: my_set.c.s
 
 # target to generate assembly for a file
 my_set.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/my_set.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/my_set.c.s
 .PHONY : my_set.c.s
-
-stack.obj: stack.c.obj
-.PHONY : stack.obj
-
-# target to build an object file
-stack.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/stack.c.obj
-.PHONY : stack.c.obj
-
-stack.i: stack.c.i
-.PHONY : stack.i
-
-# target to preprocess a source file
-stack.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/stack.c.i
-.PHONY : stack.c.i
-
-stack.s: stack.c.s
-.PHONY : stack.s
-
-# target to generate assembly for a file
-stack.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/stack.c.s
-.PHONY : stack.c.s
 
 # Help Target
 help:
@@ -184,13 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... mmn12
+	@echo ... tmp
 	@echo ... my_set.obj
 	@echo ... my_set.i
 	@echo ... my_set.s
-	@echo ... stack.obj
-	@echo ... stack.i
-	@echo ... stack.s
 .PHONY : help
 
 

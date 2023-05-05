@@ -10,56 +10,77 @@ int main ( )
 {
     printf("please enter a set of numbers: ");
     get_set();
+    printf("\n bye bye");
     return 0;
 }
 
-void get_set(void){
-    /*set a new dinamic array*/
+void get_set(void)
+{
+    /*set a new dynamic int array*/
     int *arr = (int *)malloc(sizeof(int));
-    int size = sizeof(arr);
-    /*get input from user char by char*/
+    int size = 0;
+    int val;
+    int tmp;
+    int sign = 1;
+
     char c;
-    while ((c= getchar()) != EOF){
-    	if (isnumber(c)){
-    		push(c);
-    		break;
+    while ((c=getchar()) && c != EOF) {
 
-    	}
-    	else {
-            switch (c) {
-                case ' ':
-                    /*if the stack is empty*/
-                    if (getop() || stack[0] != '\0') {
-                        /*checks if the number is in the set*/
-                        if (in_the_set(arr, size, getop())) {
-                            /*if the number is in the set*/
-                            clear_stack();
-                            continue;
-                        } else {
-                            /*if the number is not in the set add the number to the set*/
-                            arr = (int *) realloc(arr, BIGGER(size));
-                            arr[size] = getop();
-                            size++;
-                            clear_stack();
-                            continue;
-                        }
+        if ('0' <= c && c <= '9')
+        {
+            tmp = c - '0';
+            /*convert char to int*/
+            if (sign >= 0 ) {
+                sign = 1;
+            }
+            val = (val*10) +(sign * tmp);
+            continue;
+        }
 
-                    }
-                    continue;
-                    /*if the char is a number*/
-
-                default:
-
-                    continue;
+        else if (c == ' ')
+        {
+            /*if we are between ints*/
+            if (sign == 0) {
+                continue;
+            }
+            else
+            {
+                add_to_set(arr,size,val*sign);
+                size++;
+                tmp = 0;
+                sign=0;
+                val = 0;
             }
         }
 
+        if (c == '-'){
+            sign *= -1;
         }
+    }
+
+    //if the last char is a number
+    if (sign != 0)
+    {
+        add_to_set(arr,size,val*sign);
+    }
 
     print_set(arr, size);
+    printf("\n The set is: ");
     free(arr);
     size = 0;
     }
+
+void add_to_set(int *arr, int size, int num){
+
+    /*if the number is in the set continue*/
+    if (in_the_set(arr, size, num)){
+        return;
+    }
+    printf("new number added: %d\n", num);
+    /*if the number is not in the set add the number to the set*/
+    arr = (int *) realloc(arr, BIGGER(size));
+    arr[size] = num;
+}
 
 int in_the_set(int *arr, int size, int num){
     int i = 0;
@@ -82,10 +103,3 @@ void print_set(int *arr, int size){
     }
     printf("\n");
 }
-
-int isnumber(char c){
-	if (c >= '0' && c <= '9'){
-		return 1;
-	}
-    return 0;
-    }

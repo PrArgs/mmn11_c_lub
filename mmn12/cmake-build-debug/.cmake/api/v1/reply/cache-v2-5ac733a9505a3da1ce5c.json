@@ -711,7 +711,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "mmn12"
+			"value" : "tmp"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1115,6 +1115,42 @@
 		},
 		{
 			"name" : "mmn12_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12"
+		},
+		{
+			"name" : "tmp_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug"
+		},
+		{
+			"name" : "tmp_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "tmp_SOURCE_DIR",
 			"properties" : 
 			[
 				{

@@ -122,7 +122,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=mmn12
+CMAKE_PROJECT_NAME:STATIC=tmp
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/mingw64/bin/ranlib.exe
@@ -212,6 +212,15 @@ mmn12_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 mmn12_SOURCE_DIR:STATIC=G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12
+
+//Value Computed by CMake
+tmp_BINARY_DIR:STATIC=G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug
+
+//Value Computed by CMake
+tmp_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+tmp_SOURCE_DIR:STATIC=G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12
 
 
 ########################

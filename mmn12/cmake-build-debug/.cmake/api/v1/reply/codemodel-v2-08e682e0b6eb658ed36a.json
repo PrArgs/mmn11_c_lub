@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "mmn12",
+					"name" : "tmp",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "mmn12::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mmn12-Debug-5f2184f8fe1a49966521.json",
-					"name" : "mmn12",
+					"id" : "tmp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tmp-Debug-f47be30e721f4fa35a05.json",
+					"name" : "tmp",
 					"projectIndex" : 0
 				}
 			]

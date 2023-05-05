@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/mmn12.dir/all
+all: CMakeFiles/tmp.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/mmn12.dir/clean
+clean: CMakeFiles/tmp.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mmn12.dir
+# Target rules for target CMakeFiles/tmp.dir
 
 # All Build rule for target.
-CMakeFiles/mmn12.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=1,2,3 "Built target mmn12"
-.PHONY : CMakeFiles/mmn12.dir/all
+CMakeFiles/tmp.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target tmp"
+.PHONY : CMakeFiles/tmp.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mmn12.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/mmn12.dir/all
+CMakeFiles/tmp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tmp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug\CMakeFiles" 0
-.PHONY : CMakeFiles/mmn12.dir/rule
+.PHONY : CMakeFiles/tmp.dir/rule
 
 # Convenience name for target.
-mmn12: CMakeFiles/mmn12.dir/rule
-.PHONY : mmn12
+tmp: CMakeFiles/tmp.dir/rule
+.PHONY : tmp
 
 # clean rule for target.
-CMakeFiles/mmn12.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\mmn12.dir\build.make CMakeFiles/mmn12.dir/clean
-.PHONY : CMakeFiles/mmn12.dir/clean
+CMakeFiles/tmp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tmp.dir\build.make CMakeFiles/tmp.dir/clean
+.PHONY : CMakeFiles/tmp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
