@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: mmn12
+# Project: tmp
 # Configurations: Debug
 # =============================================================================
 
@@ -39,46 +39,47 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = G$:/My$ Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug/
+cmake_ninja_workdir = G$:/My$ Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target mmn12
+# Object build statements for EXECUTABLE target tmp
 
 
 #############################################
-# Order-only phony target for mmn12
+# Order-only phony target for tmp
 
-build cmake_object_order_depends_target_mmn12: phony || CMakeFiles/mmn12.dir
+build cmake_object_order_depends_target_tmp: phony || CMakeFiles/tmp.dir
 
-build CMakeFiles/mmn12.dir/main.c.obj: C_COMPILER__mmn12_Debug G$:/My$ Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/main.c || cmake_object_order_depends_target_mmn12
-  DEP_FILE = CMakeFiles\mmn12.dir\main.c.obj.d
-  FLAGS = -g -std=gnu90
-  OBJECT_DIR = CMakeFiles\mmn12.dir
-  OBJECT_FILE_DIR = CMakeFiles\mmn12.dir
+build CMakeFiles/tmp.dir/my_set.c.obj: C_COMPILER__tmp_Debug G$:/My$ Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12/my_set.c || cmake_object_order_depends_target_tmp
+  DEP_FILE = CMakeFiles\tmp.dir\my_set.c.obj.d
+  FLAGS = -g -std=gnu11
+  INCLUDES = -I"G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12/."
+  OBJECT_DIR = CMakeFiles\tmp.dir
+  OBJECT_FILE_DIR = CMakeFiles\tmp.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target mmn12
+# Link build statements for EXECUTABLE target tmp
 
 
 #############################################
-# Link the executable mmn12.exe
+# Link the executable tmp.exe
 
-build mmn12.exe: C_EXECUTABLE_LINKER__mmn12_Debug CMakeFiles/mmn12.dir/main.c.obj
+build tmp.exe: C_EXECUTABLE_LINKER__tmp_Debug CMakeFiles/tmp.dir/my_set.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\mmn12.dir
+  OBJECT_DIR = CMakeFiles\tmp.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = mmn12.exe
-  TARGET_IMPLIB = libmmn12.dll.a
-  TARGET_PDB = mmn12.exe.dbg
+  TARGET_FILE = tmp.exe
+  TARGET_IMPLIB = libtmp.dll.a
+  TARGET_PDB = tmp.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\openU_c_lab\mmn12\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -89,7 +90,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12" -B"G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\mmns\mmn11_c_lub\mmn12\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\openU_c_lab\mmn12\cmake-build-debug" && "C:\Program Files\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\openU_c_lab\mmn12" -B"G:\My Drive\Documents\Uni\OPU\2023b\C_LAB\C_LAB_assignments\openU_c_lab\mmn12\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -99,7 +100,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build mmn12: phony mmn12.exe
+build tmp: phony tmp.exe
 
 # =============================================================================
 # Folder targets.
@@ -107,9 +108,9 @@ build mmn12: phony mmn12.exe
 # =============================================================================
 
 #############################################
-# Folder: G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug
+# Folder: G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12/cmake-build-debug
 
-build all: phony mmn12.exe
+build all: phony tmp.exe
 
 # =============================================================================
 # Built-in targets

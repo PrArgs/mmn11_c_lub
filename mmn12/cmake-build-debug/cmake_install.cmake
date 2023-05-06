@@ -1,8 +1,8 @@
-# Install script for directory: G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12
+# Install script for directory: G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/mmn12")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/tmp")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/mmns/mmn11_c_lub/mmn12/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "G:/My Drive/Documents/Uni/OPU/2023b/C_LAB/C_LAB_assignments/openU_c_lab/mmn12/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

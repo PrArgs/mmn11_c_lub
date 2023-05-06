@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = @CMakeFiles/tmp.dir/includes_C.rsp
 
-C_FLAGS = -g -std=gnu11
+C_FLAGS = -g -std=gnu90
 

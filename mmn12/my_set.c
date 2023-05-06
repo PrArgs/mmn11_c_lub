@@ -18,7 +18,6 @@ void get_set(void)
 {
     /*set a new dynamic int array*/
     int *arr = (int*)malloc(sizeof(int));
-
     int size = 0;
     int val; /*the number we scan*/
     int tmp; /*the int to char we scan*/
@@ -33,7 +32,7 @@ void get_set(void)
 
             /*convert char to int*/
             tmp = c - '0';
-            if (sign > -1 )
+            if (sign == 0 )
             {
                 sign = 1;
             }
@@ -51,51 +50,53 @@ void get_set(void)
             else
             {
                 /*add the number to the set if it's not already there*/
-                add_to_set(arr,size,val*sign);
-                size++;
-                tmp = 0;
-                sign=0;
-                val = 0;
+                if (add_to_set(arr,size,val*sign))
+                {
+                    size++;
+                    tmp = 0;
+                    sign = 0;
+                    val = 0;
+                }
             }
 
         }
 
-        if (c == '-'){
+        else if (c == '-'){
             sign = -1;
         }
     }
+    printf("\n I'm out of the loop \n");
 
-    /*if the last char is a number
+    /*if the last char is a number*/
         if (sign != 0)
         {
-            /*add the number to the set if it's not already there
+            /*add the number to the set if it's not already there*/
             add_to_set(arr,size,val*sign);
         }
-	*/
-
-
     print_set(arr, size);
     size = 0;
     }
 
-void add_to_set(int *arr, int size, int num){
+int add_to_set(int *arr, int size, int num){
 
     /*if the number is in the set continue*/
     if (in_the_set(arr, size, num)){
-        return;
+        return 0;
     }
     else
     {
 
-    /*if the number is not in the set add the number to the set*/
-	int *p;
-    p = realloc(arr,(size+1)*sizeof(int));
-    if (p == NULL){
-    	printf("\n the reallocation failed \n");
-    	exit(0);
-    }
-    arr = p;
-    arr[size] = num;
+        /*if the number is not in the set add the number to the set*/
+        int *p;
+        p = realloc(arr,ENLARGE_SIZE(size));
+        if (p == NULL){
+            printf("\n the reallocation failed \n");
+            exit(0);
+        }
+        arr = p;
+        printf("\n we are adding %d: \n", num);
+        arr[size] = num;
+        return 1;
     }
 
 }
