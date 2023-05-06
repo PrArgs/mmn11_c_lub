@@ -17,7 +17,7 @@ int main ( )
 void get_set(void)
 {
     /*set a new dynamic int array*/
-    int *arr = (int*)malloc(sizeof(int));
+    int *arr = (int*)calloc(1,sizeof(int));
     int size = 0;
     int val; /*the number we scan*/
     int tmp; /*the int to char we scan*/
@@ -42,22 +42,50 @@ void get_set(void)
 
         else if (c == ' ')
         {
-            /*if blank */
+
+            /*if the number is in the set continue*/
+            if (in_the_set(arr, size, val*sign))
+            {
+                printf("\n %d is already in the set \n", val*sign);
+                tmp = 0;
+                sign = 0;
+                val = 0;
+            }
+            else
+            {
+
+                /*if the number is not in the set add the number to the set*/
+                int *tmp;
+                tmp = realloc(arr,ENLARGE_SIZE(size));
+                if (tmp == NULL){
+                    printf("\n the reallocation failed \n");
+                    exit(0);
+                }
+                arr = tmp;
+                printf("\n we are adding %d: \n", val*sign);
+                arr[size] = val*sign;
+                size++;
+                tmp = 0;
+                sign = 0;
+                val = 0;
+            }
+            /*if blank
             if (sign == 0) {
                 continue;
             }
-            /*if we just finish int scan*/
+            /*if we just finish int scan
             else
             {
-                /*add the number to the set if it's not already there*/
+                /*add the number to the set if it's not already there
                 if (add_to_set(arr,size,val*sign))
                 {
                     size++;
-                    tmp = 0;
-                    sign = 0;
-                    val = 0;
                 }
+                tmp = 0;
+                sign = 0;
+                val = 0;
             }
+            */
 
         }
 
@@ -87,13 +115,13 @@ int add_to_set(int *arr, int size, int num){
     {
 
         /*if the number is not in the set add the number to the set*/
-        int *p;
-        p = realloc(arr,ENLARGE_SIZE(size));
-        if (p == NULL){
+        int *tmp;
+        tmp = realloc(arr,ENLARGE_SIZE(size));
+        if (tmp == NULL){
             printf("\n the reallocation failed \n");
             exit(0);
         }
-        arr = p;
+        arr = tmp;
         printf("\n we are adding %d: \n", num);
         arr[size] = num;
         return 1;
@@ -105,6 +133,7 @@ int in_the_set(int *arr, int size, int num){
     int i = 0;
     for(; i <= size; i++){
         if (arr[i] == num)
+            printf("\n %d is already in the set \n", arr[i]);
             return 1;
     }
     return 0;
