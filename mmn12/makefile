@@ -1,5 +1,3 @@
-all: my_set
-
 my_set: my_set.o 
 	gcc -g -Wall -ansi -lm -pedantic my_set.o -o my_set
 

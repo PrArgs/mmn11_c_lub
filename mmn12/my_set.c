@@ -17,7 +17,8 @@ int main ( )
 void get_set(void)
 {
     /*set a new dynamic int array*/
-    int *arr = (int *)malloc(sizeof(int));
+    int *arr = (int*)malloc(sizeof(int));
+
     int size = 0;
     int val; /*the number we scan*/
     int tmp; /*the int to char we scan*/
@@ -38,7 +39,6 @@ void get_set(void)
             }
 
             val = (val*10) +(tmp);
-            continue;
         }
 
         else if (c == ' ')
@@ -57,6 +57,7 @@ void get_set(void)
                 sign=0;
                 val = 0;
             }
+
         }
 
         if (c == '-'){
@@ -64,15 +65,16 @@ void get_set(void)
         }
     }
 
-    /*if the last char is a number*/
-    if (sign != 0)
-    {
-        /*add the number to the set if it's not already there*/
-        add_to_set(arr,size,val*sign);
-    }
+    /*if the last char is a number
+        if (sign != 0)
+        {
+            /*add the number to the set if it's not already there
+            add_to_set(arr,size,val*sign);
+        }
+	*/
+
 
     print_set(arr, size);
-    printf("\n The set is: ");
     size = 0;
     }
 
@@ -82,19 +84,19 @@ void add_to_set(int *arr, int size, int num){
     if (in_the_set(arr, size, num)){
         return;
     }
+    else
+    {
 
-    /*delete*/
-    printf("new number added: %d\n", num);
     /*if the number is not in the set add the number to the set*/
-    int *tmp = (int *)realloc(arr,BIGGER(size));
-    if (tmp != NULL){
-    	arr = tmp;
-    }
-    else{
-    	printf(" Something is wrong");
+	int *p;
+    p = realloc(arr,(size+1)*sizeof(int));
+    if (p == NULL){
+    	printf("\n the reallocation failed \n");
     	exit(0);
     }
+    arr = p;
     arr[size] = num;
+    }
 
 }
 
@@ -109,10 +111,6 @@ int in_the_set(int *arr, int size, int num){
 
 void print_set(int *arr, int size){
     int i = 0;
-    if (size == 0){
-        printf("The set is empty\n");
-        return;
-    }
     printf("The set is: ");
     for(; i <= size; i++){
         if (i == size)
