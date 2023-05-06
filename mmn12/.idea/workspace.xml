@@ -12,11 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9f6114c-18c7-4a92-8dc9-64e69cfa9541" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tmp.dir/my_set.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tmp.dir/my_set.c.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tmp.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tmp.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tmp.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tmp.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_set.c" beforeDir="false" afterPath="$PROJECT_DIR$/my_set.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1683393717580</updated>
       <workItem from="1683393723159" duration="947000" />
-      <workItem from="1683394709616" duration="4357000" />
+      <workItem from="1683394709616" duration="5039000" />
     </task>
     <servers />
   </component>
@@ -89,7 +84,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/my_set.c</url>
-          <line>107</line>
+          <line>111</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
