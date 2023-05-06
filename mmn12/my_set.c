@@ -42,6 +42,10 @@ void get_set(void)
 
         else if (c == ' ')
         {
+            /*if blank*/
+            if (sign == 0) {
+                continue;
+            }
 
             /*if the number is in the set continue*/
             if (in_the_set(arr, size, val*sign))
