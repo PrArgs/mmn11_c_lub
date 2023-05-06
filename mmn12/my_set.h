@@ -9,7 +9,7 @@
 
 
 /*macro for realloc*/
-#define ENLARGE_SIZE(n) (sizeof(int)*(n+1))
+#define ENLARGE_SIZE(n) (sizeof(int)*(n+2))
 
 void get_set(void);
 int in_the_set(int *arr, int size, int num);
