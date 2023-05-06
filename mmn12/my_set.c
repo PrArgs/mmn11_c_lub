@@ -17,11 +17,11 @@ int main ( )
 void get_set(void)
 {
     /*set a new dynamic int array*/
-    int *arr = (int *)malloc(1*sizeof(int));
+    int *arr = (int *)malloc(sizeof(int));
     int size = 0;
-    int val;
-    int tmp;
-    int sign = 1;
+    int val; /*the number we scan*/
+    int tmp; /*the int to char we scan*/
+    int sign = 0; /*the sign of the number we scan*/
 
     char c;
     while ((c=getchar())!= EOF) {
@@ -29,8 +29,9 @@ void get_set(void)
     	/* if c is a digit*/
         if ('0' <= c && c <= '9')
         {
-            tmp = c - '0';
+
             /*convert char to int*/
+            tmp = c - '0';
             if (sign > -1 )
             {
                 sign = 1;
@@ -42,12 +43,14 @@ void get_set(void)
 
         else if (c == ' ')
         {
-            /*if we are between ints*/
+            /*if blank */
             if (sign == 0) {
                 continue;
             }
+            /*if we just finish int scan*/
             else
             {
+                /*add the number to the set if it's not already there*/
                 add_to_set(arr,size,val*sign);
                 size++;
                 tmp = 0;
@@ -60,17 +63,16 @@ void get_set(void)
             sign = -1;
         }
     }
-    printf("\n here \n");
 
     /*if the last char is a number*/
     if (sign != 0)
     {
+        /*add the number to the set if it's not already there*/
         add_to_set(arr,size,val*sign);
     }
 
     print_set(arr, size);
     printf("\n The set is: ");
-    free(arr);
     size = 0;
     }
 
@@ -80,15 +82,25 @@ void add_to_set(int *arr, int size, int num){
     if (in_the_set(arr, size, num)){
         return;
     }
+
+    /*delete*/
     printf("new number added: %d\n", num);
     /*if the number is not in the set add the number to the set*/
-    arr = (int *)realloc(arr, BIGGER(size));
+    int *tmp = (int *)realloc(arr,BIGGER(size));
+    if (tmp != NULL){
+    	arr = tmp;
+    }
+    else{
+    	printf(" Something is wrong");
+    	exit(0);
+    }
     arr[size] = num;
+
 }
 
 int in_the_set(int *arr, int size, int num){
     int i = 0;
-    for(; i < size; i++){
+    for(; i <= size; i++){
         if (arr[i] == num)
             return 1;
     }
@@ -102,7 +114,13 @@ void print_set(int *arr, int size){
         return;
     }
     printf("The set is: ");
-    for(; i < size; i++){
+    for(; i <= size; i++){
+        if (i == size)
+        {
+            printf(" %d", arr[i]);
+            break;
+        }
+
         printf(" %d, ", arr[i]);
     }
     printf("\n");
