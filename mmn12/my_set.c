@@ -16,8 +16,8 @@ int main ( )
 void get_set(void)
 {
     /*set a new dynamic int array*/
-    int* arr = (int*) calloc(1,1*sizeof(int));
-    int size = 0;
+    int* arr = (int*) calloc(15,1*sizeof(int));
+    static int size = 1;
     int val=0; /*the number we scan*/
     int tmp=0; /*the int to char we scan*/
     int sign = 0; /*the sign of the number we scan*/
@@ -41,7 +41,7 @@ void get_set(void)
         else if (c == ' ' && sign != 0)
         {
             /* Add the number to the set if it's not in the set increase the size index and reset the other indexes anyway*/
-            size += (add_to_set(arr, size, val*sign))? 1:0;
+        	size += (add_to_set(arr, size, val*sign))? 1:0;
             tmp = 0;
             sign = 0;
             val = 0;
@@ -55,6 +55,7 @@ void get_set(void)
         size += (add_to_set(arr, size, val*sign))? 1:0;
     }
     print_set(arr, size);
+    free(arr);
     size = 0;
     }
 
@@ -65,11 +66,16 @@ int add_to_set(int* arr, int size, int num)
     {
         return 0;
     }
-    /*if the number is not in the set add the number to the set but first realloc the array*/
-    int* tmp;
-    tmp = realloc(arr, ENLARGE_SIZE(size));
-    if (tmp == NULL) {
-        exit(0);
+    /*if the number is not in the set add the number to the set*/
+
+    if (((size+1)%15) == 0)/* if we are out of space in the array*/
+    {
+		int *tmp;
+		tmp = realloc(arr, ENLARGE_SIZE(size));
+		if (tmp == NULL)
+		{
+			exit(0);
+		}
     }
     arr[size] = num;/*add the number to the set*/
     arr[size+1] = 0;/*add 0 to the end of the set*/
